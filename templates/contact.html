@@ -81,7 +81,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> {% endcomment %}
-          <li><a class="active" href="contact.html">Contact Us</a></li>
+          <li><a class="active" href="/contact">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -141,7 +141,11 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            {% include 'messages.html' %}
+
+             <form method="post">
+              {% csrf_token %}
+              
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -157,9 +161,7 @@
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+               
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
@@ -173,7 +175,8 @@
     <!-- ======= Map Section ======= -->
     <section class="map mt-2">
       <div class="container-fluid p-0">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sbg!4v1579767901424!5m2!1sen!2sbg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8448110985246!2d36.80841431475394!3d-1.2657266990768044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173d9b8f8bdf%3A0x87f4c3678a2c5564!2sKalson%20Towers%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1656959355922!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> {% endcomment %}
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8448110985246!2d36.80841431475394!3d-1.2657266990768044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173d9b8f8bdf%3A0x87f4c3678a2c5564!2sKalson%20Towers%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1656959355922!5m2!1sen!2ske"frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </section><!-- End Map Section -->
 
