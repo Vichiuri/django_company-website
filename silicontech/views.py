@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from silicontech.models import Contact
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import forms
+from django.shortcuts import redirect, render
 
 
 def project_index(request):
