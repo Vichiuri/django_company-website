@@ -27,6 +27,11 @@ def portfolio(request):
     return render(request, 'portfolio.html')
 
 
+def portfolio_details(request):
+
+    return render(request, 'portfolio-details.html')
+
+
 def team(request):
 
     return render(request, 'team.html')
